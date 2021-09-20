@@ -1,4 +1,4 @@
-# Lab2 - Implementando Cliente e Servido HTTP
+# Lab2 - Implementando Cliente e Servidor HTTP
 
 - Carlos Renato de Andrade Figueiredo
 - Samara Ribeiro Silva
@@ -21,9 +21,9 @@ Para executá-lo, rode:
 $ cd bin
 $ ./web-client http://<HOST>:<PORT>/<FILENAME>
 ```
-Perceba que o <HOST> deve ser o host que se deseja acessar, exemplo: gaia.cs.umass.edu.
-O <PORT> é referente a porta, exemplo: 80
-O <FILENAME> é o arquivo que se deseja acessar, exemplo:wireshark-labs/HTTP-wireshark-file1.html
+Perceba que o HOST deve ser o host que se deseja acessar, exemplo: gaia.cs.umass.edu.
+O PORT é referente a porta, exemplo: 80
+O FILENAME é o arquivo que se deseja acessar, exemplo:wireshark-labs/HTTP-wireshark-file1.html
 
 Caso deseje apagar os arquivos compilados mais os arquivos baixados com execução do programa, basta voltar para a pasta /client utilizar o seguinte comando, que irá deletar a pasta /bin:
 
@@ -42,7 +42,8 @@ $ cd server
 $ make
 ```
 
-Será criado um executável "web-server" dentro da pasta /client/bin e os arquivos "html" serão copiados da pasta /file para a pasta /bin.
+Será criado um executável "web-server" dentro da pasta /server/bin e os arquivos "html" serão copiados da pasta /file para a pasta /bin.
+O Server foi configurado para rodar na porta 8080.
 
 Para executá-lo, rode:
 
@@ -52,6 +53,8 @@ $ ./web-server
 ```
 
 ## Testes
+
+![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
 
 
 
