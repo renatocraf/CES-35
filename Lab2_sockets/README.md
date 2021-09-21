@@ -74,7 +74,13 @@ Outro teste realizado foi a solicitação de um arquivo inexistente para o web-s
 
 ![alt text](https://github.com/renatocraf/CES-35/blob/ae37b94942a6bdbd8d3549c236463f3fbe874f50/Lab2_sockets/img_readme/servidor_solic_client_fail.png)
 
-Por fim, para testar a multithread foram feitas 10 solicitações utilizando o comando "curl". Verifique que o id das threads varia de acordo com a solicitação.
+Por fim, para testar a multithread foram feitas 10 solicitações utilizando o comando "curl". Observe que as ids das threads não variam até a 6ª solicitação. Significa que a solicitação está sendo resolvida e finalizada antes mesmo de receber uma nova solicitação. Note que na sétima solicitação, a resposta não foi criada a tempo, e uma nova thread foi criada.
+
+O comando utilizado para teste foi:
+
+```bash
+$ for i in {1..10}; do time curl -s http://localhost:8080/ola.html &> /dev/null & sleep 0.001; done
+```
 
 ![alt text](https://github.com/renatocraf/CES-35/blob/ae37b94942a6bdbd8d3549c236463f3fbe874f50/Lab2_sockets/img_readme/server_solic_curl.png)
 
