@@ -54,17 +54,29 @@ $ ./web-server
 
 ## Testes
 
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+Primeiro foi feito o teste no arquivo web-client, fazendo uma solicitação para o http://gaia.cs.umass.edu:80/wireshark-labs/HTTP-wireshark-file1.html.
 
+O resultado pode ser observado na figura abaixo. Como a resposta foi 200 OK, o arquivo foi gravado na pasta /client/bin com o nome "HTTP-wireshark-file1.html":
 
+![alt text](https://github.com/renatocraf/CES-35/blob/ae37b94942a6bdbd8d3549c236463f3fbe874f50/Lab2_sockets/img_readme/client_gaia_cs_umass.png)
 
+O segundo teste consistiu em fazer uma solicitação de um arquivo inexistente/errado para o mesmo servidor http://gaia.cs.umass.edu:80/wireshark-labs/arquivo_errado.
 
+Como o arquivo não existe, recebemos a resposta 404, que é mostrada na figura abaixo, mas não é gravada em um arquivo.
 
+![alt text](https://github.com/renatocraf/CES-35/blob/ae37b94942a6bdbd8d3549c236463f3fbe874f50/Lab2_sockets/img_readme/cliente_arquivo_errado_gaia.png)
 
+Agora vamos testar o nosso web-server. Inicialmente, utilizando o web-cliente criado, foi solicitado o arquivo http://localhost:8080/ola.html. O server encontra esse arquivo e responde com um 200 OK. O arquivo é gravado na pasta /client/bin.
 
+![alt text](https://github.com/renatocraf/CES-35/blob/ae37b94942a6bdbd8d3549c236463f3fbe874f50/Lab2_sockets/img_readme/server_solic_cliente.png)
 
+Outro teste realizado foi a solicitação de um arquivo inexistente para o web-server, resultando numa resposta 404 Not Found, conforme pode ser observado na próxima figura. O arquivo não é gravado.
 
+![alt text](https://github.com/renatocraf/CES-35/blob/ae37b94942a6bdbd8d3549c236463f3fbe874f50/Lab2_sockets/img_readme/servidor_solic_client_fail.png)
 
+Por fim, para testar a multithread foram feitas 10 solicitações utilizando o comando "curl". Verifique que o id das threads varia de acordo com a solicitação.
+
+![alt text](https://github.com/renatocraf/CES-35/blob/ae37b94942a6bdbd8d3549c236463f3fbe874f50/Lab2_sockets/img_readme/server_solic_curl.png)
 
 
 
